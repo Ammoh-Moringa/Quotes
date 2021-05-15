@@ -8,6 +8,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { QuotesFormsComponent } from './quotes-forms/quotes-forms.component';
 import { HighlightDirective } from './highlight.directive';
 import { DatePipePipe } from './date-pipe.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DatePipePipe } from './date-pipe.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

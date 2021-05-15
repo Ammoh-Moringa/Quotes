@@ -1,5 +1,6 @@
 export class Quotes {
   showInfo: boolean;
+  completeDate!: Date;
   constructor(
     public id: number,
     public name: string,
