@@ -45,6 +45,6 @@ To access this project on your local files, you can clone it using these steps
 5. Markdown
 6. Bootstrap
 ### Live Site
-View [live]()
+View [live](https://ammoh-moringa.github.io/Quotes/)
 ### License
 This project is under the  [MIT](license) licence.
