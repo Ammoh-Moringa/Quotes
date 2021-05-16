@@ -1,5 +1,4 @@
-<div class="overlay">
-  <h1>
+<h1>
     {{ title | titlecase }}
   </h1>
   <div class="container-fluid">
@@ -9,7 +8,7 @@
       </div>
       <div class="col-sm-9">
         <div class="all-cards">
-          <div *ngFor="let quote of sortQuotes let i= index" class="card" style="width: 24rem;"  >
+          <div *ngFor="let quote of sortQuotes let i= index" class="card p-3 mb-3" style="width: 24rem;"  >
             <div class="card-body">
               <h4 class="card-title" appHighlightQoute >{{quote.title}} {{quote.upvotes}}</h4><button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button>
               <p appHighlight class="card-text" id="param">{{quote.quote}}</p>
@@ -22,5 +21,3 @@
       </div>
     </div>
   </div>
-
-</div>

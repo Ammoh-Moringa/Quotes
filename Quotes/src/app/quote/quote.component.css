@@ -1,0 +1,15 @@
+.all-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Special Elite', cursive;
+  color: green;
+  text-align: center;
+  font-weight: bolder;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}

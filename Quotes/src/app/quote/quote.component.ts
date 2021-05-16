@@ -16,7 +16,7 @@ export class QuoteComponent implements OnInit {
     new Quotes (5,'Nehemiah','Genius','The only genius that is worth anything is the genius for hard work.','Oscar Wilde',new Date(2020,3,19),0,0),
     new Quotes (6,'Josphine','Genius','When you make a choice, you change the futureus.','Deepak Chopra',new Date(2020,12,10),0,0),
     new Quotes (7,'Allan','Genius','Color is my daylong obsession, joy, and torment.','Claude Monet ',new Date(2020,10,16),0,0),
-    new Quotes (8,'Joy','Genius','I don not want to be a genius-I have enough problems just trying to be a man.','Albert Camus ',new Date(2020,12,30),0,0),
+    new Quotes (8,'Joy','Genius','I do not want to be a genius-I have enough problems just trying to be a man.','Albert Camus ',new Date(2020,12,30),0,0),
     
   
   ];

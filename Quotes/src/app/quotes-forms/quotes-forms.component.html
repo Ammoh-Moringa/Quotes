@@ -4,13 +4,13 @@
   <form (ngSubmit)='addQuote() ;quotesForm.resetForm({})' #quotesForm='ngForm'>
       <div class="form-group">
         <label for="name">Your Name</label>
-        <input type="text" required class="form-control" id="name" [(ngModel)]='quoted.name' name="name" #name='ngModel' minlength="3">
+        <input type="text" required class="form-control" id="name" [(ngModel)]='quoted.name' name="name" #name='ngModel'  required>
         <div *ngIf="name.invalid && name.dirty" class="alert alert-danger">
           <div>
-              Your name is required.
+            <p>Your name is required.</p>
           </div>
           <div>
-            Name is at least 3 characters long.
+          <p>Name is at least 3 characters long.</p>
           </div>
         </div> 
       </div>
@@ -19,7 +19,7 @@
         <input type="text" required class="form-control" id="title" (ngModel)="quoted.title" name="title" #title='ngModel'>
         <div *ngIf="title.invalid && title.dirty" class="alert alert-danger">
           <div>
-              Title is required.
+             <p>Title is required.</p>
           </div>
         </div>
       </div>
