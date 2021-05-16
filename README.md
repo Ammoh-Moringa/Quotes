@@ -46,5 +46,5 @@ To access this project on your local files, you can clone it using these steps
 6. Bootstrap
 ### Live Site
 View [live]()
-### Licence
-This project is under the  [MIT](LICENSE) licence.
+### License
+This project is under the  [MIT](License) licence.
