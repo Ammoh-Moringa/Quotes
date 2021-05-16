@@ -44,6 +44,9 @@ export class QuoteComponent implements OnInit {
   displayInfo(index:  number){
     this.quotes[index].showInfo = !this.quotes[index].showInfo;
   }
+  findMax() {
+    return Math.max.apply(Math, this.quotes.map((quote) => quote.upvotes));
+  }
   constructor() { }
 
   ngOnInit(){

@@ -1,25 +1,35 @@
-
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"><h1>
-    {{ title | titlecase }}
-  </h1>
-  <div class="container-fluid" style="font-family: 'Shadows Into Light', cursive; font: size 24px;">
-    <div class="row">
-      <div class="col-sm-3">
-        <app-quotes-forms (add)='addQuote($event)'></app-quotes-forms>
-      </div>
-      <div class="col-sm-9">
-        <div class="all-cards">
-          <div *ngFor="let quote of sortQuotes let i= index" class="card p-3 mb-3" style="width: 24rem;"  >
-            <div class="card-body">
-              <h4 class="card-title" appHighlightQoute >{{quote.title}} {{quote.upvotes}}</h4><button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button>
-              <p appHighlight class="card-text" id="param">{{quote.quote}}</p>
-              <app-quote-details *ngIf='quote.showInfo' bind-quoty='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
-              <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.name}}</span><span id="date"><br>On: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>
-             
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<h1>
+  {{ title | titlecase }}
+</h1>
+<div class="container-fluid" style="font-family: 'Shadows Into Light', cursive; font: size 24px;">
+  <div class="row">
+    <div class="col-sm-3">
+      <app-quotes-forms (add)='addQuote($event)'></app-quotes-forms>
+    </div>
+    <div class="col-sm-9">
+      <div class="all-cards">
+        <div *ngFor="let quote of sortQuotes let i= index" class="card p-3 mb-3" style="width: 24rem;">
+
+          <div class="card-body">
+            <h4 class="card-title" appHighlightQoute>{{quote.title}} {{quote.upvotes}}</h4><button
+              (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button">See More</button>
+            <!-- <p class="card-text" id="param">{{quote.quote}}</p> -->
+            <div id={{i}} class="header">
+              <h5 *ngIf='quote.upvotes !== findMax() || quote.upvotes === 0'>{{ quote.quote }}.</h5>
+              <div *ngIf='quote.upvotes === findMax() && quote.upvotes > 0'>
+                <h5 appHighlight>{{ quote.quote }}</h5>
+              </div>
             </div>
+            <app-quote-details *ngIf='quote.showInfo' bind-quoty='quote' (isRead)='quoteDelete($event,i)'>
+            </app-quote-details>
+            <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.name}}</span><span id="date"><br>On:
+                <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>
+
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
